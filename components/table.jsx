@@ -10,9 +10,12 @@ const deathDiff = (data) => {
     infectedDiff.push(data[i + 1]["Confirmed"] - data[i]["Confirmed"]);
   }
 
+  deathDiff.splice(0, 0, 0);
+  infectedDiff.splice(0, 0, 0);
+
   return Object.entries(data).map((res, idx) => (
     <tr>
-      <td>{moment(res[1]["Date"]).format("LL")}</td>
+      <td>{moment(res[1]["Date"]).utc().format("LL")}</td>
       <td className="table-warning">{res[1]["Confirmed"]}</td>
       <td className="table-warning">{infectedDiff[idx]}</td>
       <td className="table-success">{res[1]["Recovered"]}</td>
