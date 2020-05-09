@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+#home {
+  cursor: pointer;
+}
+
+p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.4em;
+}
